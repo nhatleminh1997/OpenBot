@@ -29,6 +29,13 @@ OpenBot leverages smartphones as brains for low-cost robots. We have designed a 
 - Compile and run the [Android App](android/README.md)
 - Train your own [Driving Policy](policy/README.md)
 
+## ROS on OpenBot
+In this project fork, the ROS interface is added to control mobile robots receiving Twist messages through the same Wi-Fi network. This app works well when tested with Ohmnilabs Telepresence and Turtlebot 3.
+
+The main configuration for the ROS velocity command topic and physical properties can be modified in this [file] (https://github.com/nhatleminh1997/OpenBot/blob/master/android/app/src/main/java/org/openbot/ControlPublisherNode.java) for your usage. 
+
+The original person-following function is modified so that the robot will stop before getting too close to the person and go backward if the person getting too close to it.
+
 ## Citation
 
 Please cite our [paper](docs/paper/OpenBot.pdf) if you use OpenBot.
